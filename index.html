@@ -1,0 +1,211 @@
+{{#section global label="Головна сторінка"}}
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+
+  <title>{{ pageTitle label="Заголовок сторінки" priority=1}}</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Marmelad|Source+Sans+Pro:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+
+  <!-- Custom styles for this template -->
+  <link href="stylesheets/site.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!-- Навігація partials/_menu.html -->
+
+  {{> partials/menu}}
+
+  <!-- Головная сторінка - перший розділ -->
+  <div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column align-items-center" id="main">
+      <div class="w-100">
+        <div class="d-m-none float-left">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/237_logo.png" alt="{{ pageTitle }}" title="{{ pageTitle }}">
+        </div>
+
+        {{homepagetitle type=html editor=markdown label="Заголовок на першій сторінці" priority=2}}
+
+        <div class="row">
+          <div class="col-sm lead mt-5">
+            {{homepagecontent type=html editor=markdown label="Привітання на головній сторінці" priority=3}}
+          </div>
+          <div class="col-sm mt-5">
+            {{> partials/homepage-carousel}}
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <!-- Новини -->
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="news">
+      <div class="w-100">
+        <h2 class="mb-5">{{newstitle label="Заголовок розділу новин"}}</h2>
+        <div class="row">
+
+            {{> partials/short-news }}
+
+            <div class="col-12">
+              <a href="pages/news.html" class="btn btn-primary">Читати всі новини</a>
+            </div>
+          </div>
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <!-- Навчання -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">{{edutitle label="Заголовок розділу Навчання" }}</h2>
+        <div class="row">
+          {{> partials/education }}
+        </div>
+
+        <div class="col-12">
+            <a href="pages/education.html" class="btn btn-primary">Дізнатись більше про структуру навчання</a>
+          </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <!-- Символіка -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="symbols">
+      <div class="w-100">
+        <h2 class="mb-5">{{symbolTitile}}</h2>
+        <div class="row">
+            {{> partials/symbols}}
+        </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <!-- Колектив -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="colleagues">
+      <div class="w-100">
+        <h2 class="mb-5">{{colleaguestitle label="Заголовок розділу Колектив"}}</h2>
+        {{> partials/colleagues }}
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <!-- Для батьків -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="forparents">
+      <div class="w-100">
+        <h2 class="mb-5">{{forparents label="Заголовок розділу Для батьків"}}</h2>
+        <div class="row">
+          {{> partials/for-parents}}
+        </div>
+      </div>
+    </section>
+  
+    <hr class="m-0">
+
+  <!-- Досягнення -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+        <div class="w-100">
+          <h2 class="mb-5">Досягнення</h2>
+          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+        </div>
+    </section>
+  
+    <hr class="m-0">
+
+    <!-- Події -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="events">
+        <div class="w-100">
+          <h2 class="mb-5">Події</h2>
+          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+        </div>
+    </section>
+  
+    <hr class="m-0">
+
+    <!-- Галерея -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="gallery">
+      <div class="w-100">
+        <h2 class="mb-5">Галерея</h2>
+        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+      </div>
+    </section>
+
+    <hr class="m-0">
+    
+    <!-- Посилання -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="links">
+      <div class="w-100">
+        <h2 class="mb-5">Посилання</h2>
+        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+      </div>
+    </section>
+  
+    <hr class="m-0">
+
+    <!-- Контакти -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contacts">
+      <div class="w-100">
+        <h2 class="mb-5">Контакти</h2>
+        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="javascripts/resume.min.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA5-29cVxDOgfBrDp_A1bb8LAV12UneYok",
+      authDomain: "gym-237.firebaseapp.com",
+      databaseURL: "https://gym-237.firebaseio.com",
+      projectId: "gym-237",
+      storageBucket: "",
+      messagingSenderId: "445702669352",
+      appId: "1:445702669352:web:14062dbeebb6e14e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+
+</html>
+{{/section}}

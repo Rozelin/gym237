@@ -1,0 +1,38 @@
+<div class="col-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        {{#section forparents label="Для батьків" multiple=true limit=1}}
+            <a class="nav-link lead active" 
+                id="{{itemid priority=2 label="ID"}}-tab" 
+                data-toggle="pill"
+                href="#{{itemid priority=2 label="ID"}}" 
+                role="tab" 
+                aria-controls="{{itemid priority=2 label="ID"}}" 
+                aria-selected="true">{{title label="Заголовок" priority=1}}</a>
+        {{/section}}
+        
+        {{#section forparents label="Для батьків" multiple=true offset=1}}
+        <a class="nav-link lead" 
+            id="{{itemid priority=2 label="ID"}}-tab" 
+            data-toggle="pill"
+            href="#{{itemid priority=2 label="ID"}}" 
+            role="tab" 
+            aria-controls="{{itemid priority=2 label="ID"}}" 
+            aria-selected="true">{{title label="Заголовок"}}</a>
+          {{/section}}   
+    </div>
+</div>
+
+<div class="col-9">
+    <div class="tab-content">
+    {{#section forparents limit=1}}
+      <div class="tab-pane fade show active" id="{{itemid priority=2 label="ID"}}" role="tabpanel" aria-labelledby="{{itemid priority=2 label="ID"}}-tab">
+        {{body type=html editor=markup label="Контент" priority=3}}
+      </div>
+    {{/section}}
+    {{#section forparents offset=1}}
+      <div class="tab-pane fade" id="{{itemid priority=2 label="ID"}}" role="tabpanel" aria-labelledby="{{itemid priority=2 label="ID"}}-tab">
+        {{body type=html editor=markup label="Контент" priority=3}}
+      </div>
+    {{/section}}
+  </div>
+</div>
