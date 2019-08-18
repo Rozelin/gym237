@@ -54,7 +54,18 @@
         <h2 class="mb-md-5">{{newstitle label="Заголовок розділу новин"}}</h2>
         <div class="row">
             {{#section news multiple=true limit=8 label="Новини"}}
-              {{> partials/short-news }}
+              <div class="col-lg-3 col-md-4 col-12 mb-4">
+                  <div class="card">
+                      {{img type=image width=251 height=160 class="card-img-top"}}
+                      <div class="card-body">
+                      <h4 class="card-title">{{newsTitle label="Заголовок новини" priority=1}}</h4>
+                      {{#if newsShortBody}}
+                      <p class="card-text">{{newsShortBody type=text maxlength=100 label="Короткий зміст" priority=2 required=false}}</p>
+                      {{/if}}
+                      <a href="{{_permalink}}" class="btn btn-primary">Дізнатись більше</a>
+                      </div>
+                  </div>
+              </div>  
             {{/section}}
             <div class="col-12">
               <a href="pages/news.html" class="btn btn-primary">Читати всі новини</a>
