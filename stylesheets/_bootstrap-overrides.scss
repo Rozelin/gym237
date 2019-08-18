@@ -32,6 +32,11 @@ a {
 .carousel-inner {
   border-radius: 10px;
 }
+.card-body {
+  img {
+    padding: 10px;
+  }
+}
 .card-img-top {
   height: 160px;
   object-fit: cover;

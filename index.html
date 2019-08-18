@@ -3,7 +3,6 @@
 <html lang="ua">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -15,7 +14,6 @@
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Marmelad|Source+Sans+Pro:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
 
   <!-- Custom styles for this template -->
   <link href="stylesheets/site.css" rel="stylesheet">
@@ -29,7 +27,7 @@
 
   <!-- Головная сторінка - перший розділ -->
   <div class="container-fluid p-0">
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column align-items-center" id="main">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="main">
       <div class="w-100">
         <div class="d-m-none float-left">
             <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/237_logo.png" alt="{{ pageTitle }}" title="{{ pageTitle }}">
@@ -53,25 +51,24 @@
     <!-- Новини -->
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="news">
       <div class="w-100">
-        <h2 class="mb-5">{{newstitle label="Заголовок розділу новин"}}</h2>
+        <h2 class="mb-md-5">{{newstitle label="Заголовок розділу новин"}}</h2>
         <div class="row">
-
-            {{> partials/short-news }}
-
+            {{#section news multiple=true limit=8 label="Новини"}}
+              {{> partials/short-news }}
+            {{/section}}
             <div class="col-12">
               <a href="pages/news.html" class="btn btn-primary">Читати всі новини</a>
             </div>
           </div>
       </div>
-
     </section>
 
     <hr class="m-0">
 
     <!-- Навчання -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="education">
       <div class="w-100">
-        <h2 class="mb-5">{{edutitle label="Заголовок розділу Навчання" }}</h2>
+        <h2 class="mb-md-5">{{edutitle label="Заголовок розділу Навчання" }}</h2>
         <div class="row">
           {{> partials/education }}
         </div>
@@ -85,9 +82,9 @@
     <hr class="m-0">
 
     <!-- Символіка -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="symbols">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="symbols">
       <div class="w-100">
-        <h2 class="mb-5">{{symbolTitile}}</h2>
+        <h2 class="mb-md-5">{{symbolTitile label="Заголовок розділу Символіка"}}</h2>
         <div class="row">
             {{> partials/symbols}}
         </div>
@@ -97,9 +94,10 @@
     <hr class="m-0">
 
     <!-- Колектив -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="colleagues">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="colleagues">
       <div class="w-100">
-        <h2 class="mb-5">{{colleaguestitle label="Заголовок розділу Колектив"}}</h2>
+        <h2 class=" mb-md-5">{{colleaguestitle label="Заголовок розділу Колектив"}} </h2>
+        
         {{> partials/colleagues }}
       </div>
     </section>
@@ -107,9 +105,9 @@
     <hr class="m-0">
 
     <!-- Для батьків -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="forparents">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="forparents">
       <div class="w-100">
-        <h2 class="mb-5">{{forparents label="Заголовок розділу Для батьків"}}</h2>
+        <h2 class=" mb-md-5">{{forparents label="Заголовок розділу Для батьків"}}</h2>
         <div class="row">
           {{> partials/for-parents}}
         </div>
@@ -119,55 +117,115 @@
     <hr class="m-0">
 
   <!-- Досягнення -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+    <!-- <section class="resume-section p-3 p-lg-5 d-flex" id="awards">
         <div class="w-100">
-          <h2 class="mb-5">Досягнення</h2>
+          <h2 class=" mb-md-5">Досягнення</h2>
           <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
           <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
         </div>
     </section>
   
-    <hr class="m-0">
+    <hr class="m-0"> -->
 
     <!-- Події -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="events">
+    <!-- <section class="resume-section p-3 p-lg-5 d-flex" id="events">
         <div class="w-100">
-          <h2 class="mb-5">Події</h2>
+          <h2 class=" mb-md-5">Події</h2>
           <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
           <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
         </div>
     </section>
   
-    <hr class="m-0">
+    <hr class="m-0"> -->
 
     <!-- Галерея -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="gallery">
+    <!-- <section class="resume-section p-3 p-lg-5 d-flex" id="gallery">
       <div class="w-100">
-        <h2 class="mb-5">Галерея</h2>
+        <h2 class=" mb-md-5">Галерея</h2>
         <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
         <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
       </div>
     </section>
 
-    <hr class="m-0">
+    <hr class="m-0"> -->
     
-    <!-- Посилання -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="links">
+    <!-- Веб проекти -->
+    <section class="resume-section p-3 p-lg-5 d-flex" id="links">
       <div class="w-100">
-        <h2 class="mb-5">Посилання</h2>
-        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+        {{#section webLinks label="Веб проекти"}}
+        <h2 class=" mb-md-5">{{webLinksTitle label="Заголовок розділу Веб проекти" priority="1"}}</h2>
+        {{webLinksBody label="Контент (HTML)" type="html" editor="markup" priority="2"}}
+        {{/section}}
       </div>
     </section>
   
     <hr class="m-0">
 
     <!-- Контакти -->
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contacts">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="contacts">
       <div class="w-100">
-        <h2 class="mb-5">Контакти</h2>
-        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+        <h2 class="mb-4">Контакти</h2>
+        <div class="row">
+          <div class="col-md-8 col-sm-12 mb-4">
+            <img src="http://gym237.kiev.ua/Ad_237.gif">
+          </div>
+          <div class="col-md-4 col-sm-12 mb-4">
+            <h4 class="mb-4">Наша адреса</h4>
+            <p>м. Київ, вул Вербицького, 28-Г <br />
+              телефон (приймальна) <a href="tel:+380445609155">560-91-55</a> з 9.00-17.00 <br />
+              e-mail: <a href="mailto:gym237@ukr.net">gym237@ukr.net</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h4>Дні прийому адміністрації</h4>
+            <div class="table-responsive-sm">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Посада</th>
+                  <th>ПІБ</th>
+                  <th>Дні тижня</th>
+                  <th>Години</th>   
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Директор гімназії </td>
+                  <td>Зданевич Оксана Григорівна</td>
+                  <td>понеділок</td>
+                  <td>15<sup>00</sup>&nbsp; -&nbsp; 18<sup>00</sup></td>
+                </tr>
+              
+                <tr>
+                <td>Заступник директора з навчально-виховної роботи</td>
+                  <td>Могила Ольга Вячеславівна</td>
+                  <td>вівторок</td>
+                  <td>15<sup>00</sup>&nbsp; -&nbsp; 18<sup>00</sup></td>
+                </tr>
+                
+                <tr>
+                  <td>Заступник директора з навчально-виховної роботи</td>
+                  <td>Завальна Лариса Іванівна</td>
+                  <td>середа</td>
+                  <td>15<sup>00</sup>&nbsp; -&nbsp; 18<sup>00</sup></td>
+                </tr>
+                <tr>
+                  <td>Заступник директора з АГР</td>
+                  <td>Яковенко Наталя Олександрівна</td>
+                  <td>четвер</td><td>15<sup>00</sup>&nbsp; -&nbsp; 18<sup>00</sup></td>
+                </tr>
+                <tr>
+                  <td>Заступник директора з навчально-виховної роботи</td>
+                  <td>Крижанівська Віта Вікторівна</td>
+                  <td>п'ятниця</td>
+                  <td>15<sup>00</sup>&nbsp; -&nbsp; 18<sup>00</sup></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
       </div>
     </section>
 
@@ -184,27 +242,6 @@
 
   <!-- Custom scripts for this template -->
   <script src="javascripts/resume.min.js"></script>
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#config-web-app -->
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyA5-29cVxDOgfBrDp_A1bb8LAV12UneYok",
-      authDomain: "gym-237.firebaseapp.com",
-      databaseURL: "https://gym-237.firebaseio.com",
-      projectId: "gym-237",
-      storageBucket: "",
-      messagingSenderId: "445702669352",
-      appId: "1:445702669352:web:14062dbeebb6e14e"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
 </body>
 
 </html>

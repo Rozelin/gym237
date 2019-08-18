@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         
-        <title>{{ newstitle }} | {{ pageTitle }}</title>
+        <title>{{ edutitle }} | {{ pageTitle }}</title>
         
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,15 +25,25 @@
 
     <div class="container pt-4" id="main">
         <div class="row">
-            <div class="col-12">
-                <h1 class="mb-4">{{newstitle}}</h1>
-            </div>
+            <div class="col-12"><h1 class="mb-4">{{edutitle}}</h1></div>
         </div>
-
+        
         <div class="row">
-            {{#section news multiple=true label="Новини"}}
-                {{> partials/short-news }} 
-            {{/section}}
+            <div class="col-md-4 col-12 education-nav-list">
+                {{#section edustructure label="Структура навчання" multiple=true}}
+                    <a href="#{{anchor label="Якор" required=true}}">{{linkTitle label="Текст посилання" required=true}}</a><br />
+                {{/section}}
+            </div>
+            <div class="col-md-8 col-12 offset-md-4">
+                {{#section edustructure label="Структура навчання" multiple=true}}
+                    <div class="card mb-4" id="{{anchor}}">
+                        <div class="card-body">
+                            <h3>{{title label="Заголовок" priority=1 }}</h3>
+                            {{content type=html editor="markdown" priority=2 label="Зміст"}}
+                        </div>
+                    </div>
+                {{/section}}
+            </div>
         </div>
     </div>
   

@@ -23,17 +23,29 @@
 
     {{> partials/menu }}
 
-    <div class="container pt-4" id="main">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="mb-4">{{newstitle}}</h1>
-            </div>
-        </div>
+    <div class="container pt-4"  id="main">
+        <a href="/pages/news.html">< Повернутись до новин</a>
 
         <div class="row">
-            {{#section news multiple=true label="Новини"}}
-                {{> partials/short-news }} 
-            {{/section}}
+            <div class="col-12 mb-4">
+                <h1 class="mb-4 mt-4">{{newstitle}}</h1>
+            </div>
+
+            {{#section news }}
+                <div class="col-12 mb-4" id={{_permalink}}>
+                    <div class="card">
+                        {{img type=image width=678 height=320 class="card-img-top"}}
+                        <div class="card-body">
+                        <h4 class="card-title">{{newsTitle label="Заголовок новини" priority=1}}</h4>
+                        {{#if body}}
+                            <p class="card-text">
+                                {{body label="Зміст новини" type=html editor="wysiwyg" images=true priority=3 required=false}}
+                            </p>
+                        {{/if}}
+                        </div>
+                    </div>
+                </div>  
+            {{/section}}    
         </div>
     </div>
   

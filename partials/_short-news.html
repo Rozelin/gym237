@@ -1,5 +1,3 @@
-{{#section news multiple=true limit=8 label="Новини"}}
-
 <div class="col-lg-3 col-md-4 col-12 mb-4">
     <div class="card">
         {{img type=image width=251 height=160 class="card-img-top"}}
@@ -8,8 +6,7 @@
         {{#if newsShortBody}}
         <p class="card-text">{{newsShortBody type=text maxlength=100 label="Короткий зміст" priority=2 required=false}}</p>
         {{/if}}
-        <a href="pages/news#{{_permalink}}" class="btn btn-primary">Дізнатись більше</a>
+        <a href="{{_permalink}}" class="btn btn-primary">Дізнатись більше</a>
         </div>
     </div>
 </div>  
-{{/section}}

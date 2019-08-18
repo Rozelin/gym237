@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-        {{#section global}}
+    {{#section global}}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         
-        <title>{{ cooperationtitle }} | {{ pageTitle }}</title>
+        <title>{{cooperationtitle label="Заголовок розділу Співпраця"}} | {{ pageTitle }}</title>
         
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,18 +32,50 @@
 
         {{> partials/menu }}
 
-        <div class="container-fluid p-0">
-            <section id="main">
-                <h1>{{cooperationtitle}}</h1>
+        <div class="container mt-4" id="main">
+            <h1 class="mb-4">{{cooperationtitle}}</h1>
+            <div class="row">
 
-                <div class="row">
-
-                    {{> partials/cooperation }}
-            
-                </div>
+            <div class="col-md-3 col-12">
+                    <div class="nav flex-column nav-pills mb-sm-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        {{#section cooperation label="Співпраця" multiple=true limit=1}}
+                            <a class="nav-link lead active" 
+                                id="{{itemid priority=2 label="ID"}}-tab" 
+                                data-toggle="pill"
+                                href="#{{itemid priority=2 label="ID"}}" 
+                                role="tab" 
+                                aria-controls="{{itemid priority=2 label="ID"}}" 
+                                aria-selected="true">{{title label="Заголовок" priority=1}}</a>
+                        {{/section}}
                         
-            </section>
+                        {{#section cooperation label="Співпраця" multiple=true offset=1}}
+                        <a class="nav-link lead" 
+                            id="{{itemid priority=2 label="ID"}}-tab" 
+                            data-toggle="pill"
+                            href="#{{itemid priority=2 label="ID"}}" 
+                            role="tab" 
+                            aria-controls="{{itemid priority=2 label="ID"}}" 
+                            aria-selected="true">{{title label="Заголовок"}}</a>
+                          {{/section}}   
+                    </div>
+                </div>
+                
+                <div class="col-md-9 col-12">
+                    <div class="tab-content cooperation-content">
+                    {{#section cooperation limit=1}}
+                      <div class="tab-pane fade show active" id="{{itemid priority=2 label="ID"}}" role="tabpanel" aria-labelledby="{{itemid priority=2 label="ID"}}-tab">
+                        {{body type=html editor=wysiwyg images=true label="Контент" priority=3}}
+                      </div>
+                    {{/section}}
+                    {{#section cooperation offset=1}}
+                      <div class="tab-pane fade" id="{{itemid priority=2 label="ID"}}" role="tabpanel" aria-labelledby="{{itemid priority=2 label="ID"}}-tab">
+                        {{body type=html editor=wysiwyg label="Контент" priority=3}}
+                      </div>
+                    {{/section}}
+                  </div>
+                </div>
+            </div>
         </div>
-        {{/section}}
     </body>
+    {{/section}}
 </html>
