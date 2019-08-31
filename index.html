@@ -11,9 +11,6 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
   <!-- Custom styles for this template -->
   <link href="stylesheets/site.css" rel="stylesheet">
 </head>
@@ -104,10 +101,11 @@
     <hr class="m-0">
 
     <!-- Колектив -->
-    <section class="site-section p-3 p-lg-5 d-flex" id="colleagues">
+    <section class="site-section p-3 p-lg-5 d-flex colleagues-section" id="colleagues" >
       <div class="w-100">
-        <h2 class=" mb-md-5">{{colleaguestitle label="Заголовок розділу Колектив"}} </h2>
-        
+        <h2 class=" mb-md-4">{{colleaguestitle label="Заголовок розділу Колектив"}} <br />
+          <small class="text-muted"><a href="http://gym237.kiev.ua/Kadr_gym237.doc">Кадровий склад (Завантажити)</a></small>
+        </h2> 
         {{> partials/colleagues }}
       </div>
     </section>

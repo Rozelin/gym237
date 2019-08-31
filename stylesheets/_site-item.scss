@@ -4,7 +4,7 @@ section.site-section {
   max-width: 75rem;
 }
 
-@media (min-width: $screen-md) {
+@media (max-width: $screen-md) {
   section.site-section {
     min-height: 100vh;
     padding-top: 2rem !important;
@@ -17,7 +17,7 @@ section.site-section {
   }
 }
 
-@media (min-width: $screen-lg) {
+@media (max-width: $screen-lg) {
   section.site-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
