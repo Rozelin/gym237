@@ -24,6 +24,7 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$orange-secondary: #d48a6e;
 
 $primary:       $orange !default;
 $secondary:     $gray-600 !default;
@@ -33,6 +34,14 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
+
+// Styleguide colors
+
+$color-base: $white;
+$color-main: $gray-900;
+$color-accent: $orange;
+$color-accent-secondary: $orange-secondary;
+
 
 // Page Variables
 
@@ -44,7 +53,6 @@ $font-main: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
 $font-decor: 'Philosopher', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 // Breakpoints
-
-$screen-lg: 1024px;
+$screen-lg: 992px;
 $screen-md: 768px;
 $screen-sm: 480px;

@@ -1,0 +1,16 @@
+.cooperation-content {
+    img {
+      padding: 10px;
+      border-radius: 15px;
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: $screen-md) {
+    .cooperation-content img {
+      width: 100%;
+    }
+    .homepage-title {
+      
+    }
+  }
